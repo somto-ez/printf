@@ -1,5 +1,5 @@
 #include <stdarg.h>
-
+#include <stdio.h>
 #include "main.h"
 
 int _printf(const char *format, ...)
@@ -10,7 +10,7 @@ int _printf(const char *format, ...)
 
 	int count = 0, i; /* i is the array of format*/
 
-	for (i = 0; format[i] != '\0'; i++)
+	for (i = 0; format[i] != '\0'; )
 	{
 		if (format[i] != '%')
 		{
@@ -28,5 +28,6 @@ int _printf(const char *format, ...)
 			i += 2;
 		}
 	}
+	va_end(printed);
 return (count);
 }
