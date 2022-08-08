@@ -1,13 +1,17 @@
 #include <stdarg.h>
 #include "main.h"
 #include <stdio.h>
+
 int _printf(const char *format, ...)
-{
+{	int count = 0;
+	int i;
+	
 	va_list printed;
 
 	va_start(printed, format);
 
-	int count = 0, i; /* i is the array of format*/
+	
+        /* i is the array of format*/
 
 	for (i = 0; format[i] != '\0'; )
 	{
