@@ -1,6 +1,6 @@
 #include <stdarg.h>
 #include "main.h"
-
+#include <stdio.h>
 int _printf(const char *format, ...)
 {
 	va_list printed;
@@ -22,6 +22,12 @@ int _printf(const char *format, ...)
 			{
 				case 'c':
 					count += _putchar(va_arg(printed, int));
+				break;
+
+				case 's':
+					count += print_string(va_arg(printed, char*));
+					break;
+				default:
 				break;
 			}
 			i += 2;
