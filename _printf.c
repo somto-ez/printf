@@ -22,9 +22,11 @@ int _printf(const char *format, ...)
 			switch (format[i + 1])
 			{
 				case 'c':
-					count += _putchar(va_arg(printed, int);
+					count += _putchar(va_arg(printed, int));
 				break;
 			}
+			i += 2;
 		}
 	}
+return (count);
 }
