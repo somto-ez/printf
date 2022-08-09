@@ -22,7 +22,7 @@ int _print_str(va_list printed)
 {
 	int add;
 	char *str = va_arg(printed, char *);
-	
+
 	if (str == NULL)
 		str = "(null)";
 	for (add = 0; str[add]; add++)
