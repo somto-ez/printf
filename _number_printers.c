@@ -8,7 +8,6 @@
 int _print_decimal(va_list printed)
 {
 	int a[10];
-	
 	int j, m, n, sum, add;
 
 	n = va_arg(printed, int);
