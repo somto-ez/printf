@@ -7,7 +7,7 @@ int _printf(const char *format, ...)
 	printer printer;
 
 	int i = 0;
-	int count = 0;
+	int add = 0;
 
 	va_start(printed, format);
 
@@ -16,7 +16,7 @@ int _printf(const char *format, ...)
 		for (; format[i] != '%' && format[i]; i++)
 		{
 		_putchar(format[i];
-		count++;
+		add++;
 		}
 
 		if (!format[i])
@@ -25,12 +25,12 @@ int _printf(const char *format, ...)
 			printer = _get_printer(&format[i + 1]);
 			if (printer.specifier != NULL)
 			{
-			count += printer.run(printed);
+			add += printer.run(printed);
 			i += 2;
 			continue;
 			}
 			_putchar(format[i]);
-			count++;
+			add++;
 
 			if (format[i + 1] == '%')
 			i += 2;
@@ -39,5 +39,5 @@ int _printf(const char *format, ...)
 				i++;
 	}
 	va_end(printed);
-	return (count);
+	return (add);
 }
