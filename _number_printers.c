@@ -11,7 +11,7 @@ int _print_decimal(va_list printed)
 	
 	int j, m, n, sum, add;
 
-	n = var_arg(printed, int);
+	n = va_arg(printed, int);
 	add = 0;
 	m = 1000000000;
 	a[0] = n / m;
@@ -28,7 +28,7 @@ int _print_decimal(va_list printed)
 		for (j = 0; j < 10; j++)
 			a[j] *= -1;
 	}
-	for (j = 0; sum = 0; j < 10; j++)
+	for (j = 0, sum = 0; j < 10; j++)
 	{
 		sum += a[j];
 		if (sum != 0 || j == 9)
@@ -68,7 +68,7 @@ int _print_int(va_list printed)
 		for (j = 0; j < 10; j++)
 			a[j] *= -1;
 	}
-	for (j = 0; sum = 0; j < 10; j++)
+	for (j = 0, sum = 0; j < 10; j++)
 	{
 		sum += a[j];
 		if (sum != 0 || j == 9)

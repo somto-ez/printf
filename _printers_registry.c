@@ -23,5 +23,5 @@ printer _get_printer(const char *specifier)
 		if (*specifier == *(printers[i].specifier))
 			break;
 	}
-	return (printer[i]);
+	return (printers[i]);
 }
