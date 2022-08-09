@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _get_printer - function that checks for agiven specifier
+ * _get_printer - function that checks for given specifier
  * @specifier: the specifier to get a printer for
  *
  * Return: the printer found
