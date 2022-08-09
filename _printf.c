@@ -20,7 +20,9 @@ int _printf(const char *format, ...)
 		}
 
 		if (!format[i])
+		{
 			break;
+		}
 
 			printer = _get_printer(&format[i + 1]);
 			if (printer.specifier != NULL)
