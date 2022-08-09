@@ -14,7 +14,7 @@ typedef struct printer
 {
 	char *specifier;
 	int (*run)(va_list);
-}printer;
+} printer;
 
 printer _get_printer(const char *specifier);
 int _printf(const char *format, ...);
