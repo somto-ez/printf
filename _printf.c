@@ -1,5 +1,11 @@
 #include "main.h"
 
+/**
+ * _printf - prints input
+ * @format: format of string
+ * Return: count of characters
+ */
+
 int _printf(const char *format, ...)
 {
 	va_list printed;
