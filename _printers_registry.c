@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _get_printer - function that checks for a gestered priter for a given specifier
+ * _get_printer - function that checks for agiven specifier
  * @specifier: the specifier to get a printer for
  *
  * Return: the printer found
@@ -18,7 +18,7 @@ printer _get_printer(const char *specifier)
 		{NULL, NULL}
 	};
 
-	for (i = 0;printers[i].specifier != NULL; i++)
+	for (i = 0; printers[i].specifier != NULL; i++)
 	{
 		if (*specifier == *(printers[i].specifier))
 			break;
